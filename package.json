@@ -1,8 +1,8 @@
 {
   "name": "asset",
   "description": "The best project ever.",
-  "version": "1.0.0",
-  "homepage": "",
+  "version": "1.0.1",
+  "homepage": "http://github.com/kaelzhang/asset",
   "author": {
     "name": "Kael",
     "email": "i@kael.me"
