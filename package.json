@@ -1,6 +1,6 @@
 {
   "name": "asset",
-  "description": "The best project ever.",
+  "description": "Methods to dynamically load JavaScript, CSS, and Images.",
   "version": "1.0.1",
   "homepage": "http://github.com/kaelzhang/asset",
   "author": {
@@ -26,6 +26,15 @@
   "scripts": {
     "test": "make test"
   },
-  "keywords": [],
+  "keywords": [
+    "asset",
+    "assets",
+    "load",
+    "javascript",
+    "css",
+    "image",
+    "images",
+    "onload"
+  ],
   "main": "index.js"
 }

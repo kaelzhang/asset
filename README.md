@@ -1,6 +1,6 @@
 # asset
 
-> The best project ever.
+Methods to dynamically load JavaScript, CSS, and Images.
 
 ## Getting Started
 Before anything taking its part, you should install [node](http://nodejs.org) and "cortex".
@@ -9,58 +9,39 @@ Before anything taking its part, you should install [node](http://nodejs.org) an
 
 Visit [http://nodejs.org](http://nodejs.org), download and install the proper version of nodejs.
 
-#### Install Cortex
+## Synopsis
 
-    # maybe you should use `sudo`
-    npm install -g cortex
+```js
+var asset = require('asset');
+asset[type](src, callback);
+```
 
-## Using asset In Your Project
+## asset.image(src, callback)
 
-First, install 'asset' directly with `ctx install` (recommended)
-	
-	ctx install asset --save
-	
-or, you could update your package.json manually
-    
-    dependencies: {
-        'asset': '<version-you-want>'
-    }
-    
-and install dependencies
-	
-	ctx install
-    
-Then, use `require` method in your module
-    
-    var asset = require('asset');
-    
-Finally, start cortex server
-    
-    ctx server
-    
-Then cortex will care all the rest.
+Preloads an image. **NOTICE** that, `asset.image` will not inject the image into the document.
+
+Returns `HTMLImageElement` the image element.
+
+```js
+var img = asset.image('http://domain.com/icon.png', function(){
+    div.appendChild(img);
+});
+```
+
+## asset.js(src, callback)
+
+- src `String` The location of the JavaScript file to load.
+- callback `function()` A function that will be invoke when loaded.
+
+Injects a script tag into the head section of the document, pointing to the src specified.
+
+Returns `HTMLScriptElement` the script node of the JavaScript which is tried to load into the document.
 
 
-## API Documentation
+## asset.css(src, callback) 
 
-### asset: constructor
-': constructor' means the `module.exports` of module 'asset' is a constructor that we should use it with the `new` keyword
+Injects a link node of stylesheet in the page.
 
-	new asset(options)
-	
-#### options
-- options.name {String}
+Returns `HTMLLinkElement` the link node.
 
 
-
-### asset.\<method-name\>(arguments)
-Means this is a static method of `module.exports`
-
-#### arguments
-// arguments description here
-
-### .\<method-name\>(arguments)
-Mean this is a method of the instance
-
-#### arguments
-// arguments description here
