@@ -1,7 +1,7 @@
 {
   "name": "asset",
   "description": "Methods to dynamically load JavaScript, CSS, and Images.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://github.com/kaelzhang/asset",
   "author": {
     "name": "Kael",
